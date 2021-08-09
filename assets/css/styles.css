@@ -292,26 +292,19 @@ img{
   border-radius: .5rem;
   cursor: pointer;
   backdrop-filter: blur(5px);
-  transition: .3s;
+  transition: .5s;
 }
 .portfolio__img:hover .portfolio__link{
   bottom: 0;
 }
 .portfolio__link-name{
-  color: rgb(0, 0, 0);
+  color: #fff;
   text-align: center;
 }
-
-.portfolio__myrec-link1:hover::after{
-  position: absolute;
-  content: "";
-  width: 42%;
-  height: 0.18rem;
-  left: 0.5rem;
-  top: 4rem;
-  background-color: #ff7404;
+.portfolio__myrec-link{
+  color:#ff7404;
 }
-.portfolio__myrec-link2:hover::after{
+.portfolio__myrec-link:hover::after{
   position: absolute;
   content: "";
   width: 23%;
@@ -320,17 +313,10 @@ img{
   top: 11.8rem;
   background-color: #ff7404;
 }
-
-.portfolio__popstocks-link1:hover::after{
-  position: absolute;
-  content: "";
-  width: 26%;
-  height: 0.18rem;
-  left: 0.35rem;
-  top: 4rem;
-  background-color: #009E60;
+.portfolio__popstocks-link{
+  color:#009E60;
 }
-.portfolio__popstocks-link2:hover::after{
+.portfolio__popstocks-link:hover::after{
   position: absolute;
   content: "";
   width: 23%;
@@ -339,24 +325,65 @@ img{
   top: 11.8rem;
   background-color: #009E60;
 }
-
-.portfolio__mymot-link1:hover::after{
-  position: absolute;
-  content: "";
-  width: 26%;
-  height: 0.18rem;
-  left: 0.35rem;
-  top: 4rem;
-  background-color: #fff;
+.portfolio__mymot-link{
+  color:rgb(69, 212, 205);
 }
-.portfolio__mymot-link2:hover::after{
+.portfolio__mymot-link:hover::after{
   position: absolute;
   content: "";
   width: 23%;
   height: 0.18rem;
   left: 11.95rem;
+  top: 11.05rem;
+  background-color: rgb(69, 212, 205);
+}
+.portfolio__ann-link{
+  color:#ca4cab;
+}
+.portfolio__ann-link:hover::after{
+  position: absolute;
+  content: "";
+  width: 30%;
+  height: 0.18rem;
+  left: 10.87rem;
+  top: 11.9rem;
+  background-color: #ca4cab;
+}
+.portfolio__keras-link{
+  color:#e0d757;
+}
+.portfolio__keras-link:hover::after{
+  position: absolute;
+  content: "";
+  width: 30%;
+  height: 0.18rem;
+  left: 10.87rem;
+  top: 12.6rem;
+  background-color: #e0d757;
+}
+.portfolio__trAIner-link{
+  color:#63a0da;
+}
+.portfolio__trAIner-link:hover::after{
+  position: absolute;
+  content: "";
+  width: 21%;
+  height: 0.18rem;
+  left: 12.2rem;
   top: 11.8rem;
-  background-color: #fff;
+  background-color: #63a0da;
+}
+.portfolio__academic-link{
+  color:rgb(211, 90, 90);
+}
+.portfolio__academic-link:hover::after{
+  position: absolute;
+  content: "";
+  width: 21%;
+  height: 0.18rem;
+  left: 12.2rem;
+  top: 11.1rem;
+  background-color: rgb(211, 90, 90);
 }
 
 /* ===== CONTACT =====*/
@@ -465,8 +492,8 @@ img{
     margin-right: var(--mb-4);
   }
   .home__img{
-    width: 750px;
-    bottom: 25%;
+    width: 650px;
+    bottom: 20%;
     left: 52%;
   }
 
