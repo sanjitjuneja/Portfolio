@@ -1,9 +1,7 @@
 <?php
-    echo "This message has been sent from PHP file";
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-    echo $name;
+    $name = $GET['name'];
+    $email = $GET['email'];
+    $message = $GET['message'];
 
     if (!empty($email) && !empty($message) && !empty($name)) {
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {

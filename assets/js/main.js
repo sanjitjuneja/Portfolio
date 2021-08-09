@@ -88,7 +88,7 @@ form.onsubmit = (e) => {
     statusTxt.innerText = "Sending...";
 
   let xhr = new XMLHttpRequest();
-  xhr.open("POST", "../assets/php/contact-handler.php", true);
+  xhr.open("GET", "assets/php/contact-handler.php", true);
   xhr.onload = ()=> {
     if(xhr.readyState == 4 && xhr.status == 200){
       let response = xhr.response;
@@ -101,7 +101,6 @@ form.onsubmit = (e) => {
         }, 3000);
       }
       statusTxt.innerText = response;
-      form.classList.remove("disabled");
     }
   }
   let formData = new FormData(form);
