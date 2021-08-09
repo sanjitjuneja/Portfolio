@@ -85,24 +85,25 @@ form.onsubmit = (e) => {
     e.preventDefault();
     statusTxt.style.color = "#4070F4";
     statusTxt.style.display = "block";
+    statusTxt.innerText = "Sending...";
 
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "../php/contact-handler.php", true);
-    xhr.onload = () => {
-        console.log("HELLO");
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            let response = xhr.response;
-            if (response.indexOf("failed") != -1 || response.indexOf("valid") != -1 || response.indexOf("required") != -1) {
-                statusTxt.style.color = "red";
-            } else {
-                form.reset();
-                setTimeout(() => {
-                    statusTxt.style.display = "none";
-                }, 3000);
-            }
-            statusTxt.innerText = response;
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "../assets/php/contact-handler.php", true);
+  xhr.onload = ()=> {
+    if(xhr.readyState == 4 && xhr.status == 200){
+      let response = xhr.response;
+      if(response.indexOf("required") != -1 || response.indexOf("valid") != -1 || response.indexOf("failed") != -1){
+        statusTxt.style.color = "red";
+      }else{
+        form.reset();
+        setTimeout(()=>{
+          statusTxt.style.display = "none";
+        }, 3000);
+      }
+      statusTxt.innerText = response;
+      form.classList.remove("disabled");
     }
-    let formData = new FormData(form);
-    xhr.send(formData);
-    }
+  }
+  let formData = new FormData(form);
+  xhr.send(formData);
 }
