@@ -65,12 +65,6 @@ sr.reveal('.about__img',{});
 sr.reveal('.about__subtitle',{delay: 400}); 
 sr.reveal('.about__text',{delay: 400}); 
 
-// /*SCROLL SKILLS*/
-// sr.reveal('.skills__subtitle',{}); 
-// sr.reveal('.skills__text',{}); 
-// sr.reveal('.skills__data',{interval: 200}); 
-// sr.reveal('.skills__img',{delay: 600});
-
 /*SCROLL WORK*/
 sr.reveal('.portfolio__img',{interval: 200}); 
 
@@ -88,13 +82,14 @@ form.onsubmit = (e) => {
     statusTxt.innerText = "Sending...";
 
   let xhr = new XMLHttpRequest();
-  xhr.open("GET", "assets/php/contact-handler.php", true);
+  xhr.open("POST", "assets/php/contact-handler.php", true);
   xhr.onload = ()=> {
     if(xhr.readyState == 4 && xhr.status == 200){
       let response = xhr.response;
-      if(response.indexOf("required") != -1 || response.indexOf("valid") != -1 || response.indexOf("failed") != -1){
+      console.log(response);
+      if(response.indexOf("required") != -1 || response.indexOf("valid") != -1 || response.indexOf("failed") != -1) {
         statusTxt.style.color = "red";
-      }else{
+      } else {
         form.reset();
         setTimeout(()=>{
           statusTxt.style.display = "none";

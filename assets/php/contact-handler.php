@@ -1,7 +1,9 @@
 <?php
-    $name = $GET['name'];
-    $email = $GET['email'];
-    $message = $GET['message'];
+    $name = $POST['name'];
+    $email = $POST['email'];
+    $message = $POST['message'];
+
+    print_r($_POST);
 
     if (!empty($email) && !empty($message) && !empty($name)) {
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -23,4 +25,5 @@
     } else {
         echo "Name, email, and message fields are required!";
     }
+
 ?>
