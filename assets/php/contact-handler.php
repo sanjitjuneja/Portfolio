@@ -3,8 +3,6 @@
     $email = $POST['email'];
     $message = $POST['message'];
 
-    print_r($_POST);
-
     if (!empty($email) && !empty($message) && !empty($name)) {
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $receiver = 'sanjit.j55@gmail.com';
