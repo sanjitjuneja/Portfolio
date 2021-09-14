@@ -82,7 +82,7 @@ form.onsubmit = (e) => {
     statusTxt.innerText = "Sending...";
 
   let xhr = new XMLHttpRequest();
-  xhr.open("POST", "assets/php/contact-handler.php", true);
+  xhr.open("POST", "http://127.0.0.1:5500/assets/php/contact-handler.php", false);
   xhr.onload = ()=> {
     if(xhr.readyState == 4 && xhr.status == 200){
       let response = xhr.response;
