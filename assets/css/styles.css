@@ -301,17 +301,30 @@ img{
   color: #fff;
   text-align: center;
 }
-.portfolio__myrec-link{
-  color:#ff7404;
+.portfolio__tack-link{
+  color:#69AF6B;
 }
-.portfolio__myrec-link:hover::after{
+.portfolio__tack-link:hover::after{
   position: absolute;
   content: "";
   width: 23%;
   height: 0.18rem;
   left: 11.95rem;
   top: 11.8rem;
-  background-color: #ff7404;
+  background-color: #69AF6B;
+}
+
+.portfolio__bounce-link{
+  color:#9f6cec;
+}
+.portfolio__bounce-link:hover::after{
+  position: absolute;
+  content: "";
+  width: 23%;
+  height: 0.18rem;
+  left: 11.95rem;
+  top: 11.8rem;
+  background-color: #9f6cec;
 }
 .portfolio__popstocks-link{
   color:#009E60;
